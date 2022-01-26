@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if request.user.is_authenticated %}
+<h1>Witaj {{user.get_username}}</h1>
+{% else %}
+<h1>Nie jesteś zalogowany</h1>
+{% endif %}
+{% endblock content %}
+
